@@ -1,0 +1,38 @@
+/* Profile Menu Styles */
+.profile-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    margin-top: 1rem;
+    z-index: 1000;
+    animation: fadeInDown 0.2s ease-out;
+}
+
+.profile-menu-item {
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.profile-menu-item:hover {
+    background-color: #f3f4f6;
+}
+
+.profile-menu-item .icon-wrapper {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

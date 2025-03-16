@@ -1,0 +1,44 @@
+.sidebar {
+    min-width: 200px;
+    width: max-content;
+    height: 100vh;
+    position: sticky;
+    top: 10%;
+    left: 0;
+    z-index: 0;
+    transition: all 0.5s ease-in-out;
+    color: #4f46e5;
+    background-color: #ffffff;
+}
+
+.sidebar.collapsed {
+    top: 0;
+    min-width: max-content;
+}
+
+.sidebar .menu-item {
+    color: #5a67d8;
+    transition: all 0.5s ease;
+    border-radius: 8px;
+    margin: 4px 8px;
+}
+
+.sidebar .menu-item:hover {
+    background-color: #5a67d8;
+    color: #ffffff;
+}
+
+.sidebar .menu-item.active {
+    background-color: #4f46e5;
+    color: #ffffff;
+}
+
+.sidebar .menu-text {
+    transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.sidebar.collapsed .menu-text {
+    opacity: 0;
+    transform: translateX(-50px);
+    position: absolute;
+}
