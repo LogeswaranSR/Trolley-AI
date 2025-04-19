@@ -19,11 +19,7 @@ const Sidebar = ({ states }) => {
         { id: "home", name: "Home", icon: <Home size={20} /> },
         { id: "tanya", name: "Tanya", icon: <MessageSquare size={20} /> },
         { id: "explore", name: "Explore", icon: <Compass size={20} /> },
-        {
-            id: "local-help",
-            name: "Local Help",
-            icon: <HelpCircle size={20} />,
-        },
+        { id: "local-help", name: "Local Help",icon: <HelpCircle size={20} /> },
         { id: "settings", name: "Settings", icon: <Settings size={20} /> },
     ];
 

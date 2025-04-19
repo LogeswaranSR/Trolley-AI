@@ -24,24 +24,29 @@
 .translator-container,
 .commentary-container {
     height: 600px;
-    animation: zoomInFade 0.5s ease-out;
+    animation: zoomInFade 1s ease-out;
     background: white;
     border-radius: 8px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
+.animate{
+    transition: all 2s ease-in-out;
+}
+
 .chat-messages {
-    height: calc(100% - 60px);
     overflow-y: auto;
 }
 
 .message {
-    max-width: 80%;
+    width: fit-content;
+    max-width: 75%;
     margin-bottom: 1rem;
 }
 
 .message.user {
+    text-align: end;
     margin-left: auto;
 }
 

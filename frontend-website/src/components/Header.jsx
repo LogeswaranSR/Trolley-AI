@@ -10,6 +10,11 @@ const Header = ({ states }) => {
     const profileMenuRef = useRef(null);
     const profileButtonRef = useRef(null);
 
+    states["profileMenu"] = {
+        var: isProfileOpen,
+        fn: setIsProfileOpen,
+    };
+
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
     };
@@ -25,11 +30,8 @@ const Header = ({ states }) => {
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (
-                profileMenuRef.current &&
-                !profileMenuRef.current.contains(event.target) &&
-                !profileButtonRef.current?.contains(event.target)
-            ) {
+            if (profileMenuRef.current && !profileMenuRef.current.contains(event.target) && !profileButtonRef.current?.contains(event.target))
+            {
                 setIsProfileOpen(false);
             }
         };
@@ -80,7 +82,7 @@ const Header = ({ states }) => {
                         <User size={24} />
                     </button>
                     <div ref={profileMenuRef}>
-                        <ProfileMenu isOpen={isProfileOpen} />
+                        <ProfileMenu states={ states } />
                     </div>
                 </div>
             </div>

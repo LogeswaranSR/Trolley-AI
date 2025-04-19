@@ -7,6 +7,9 @@ import Footer from "./components/Footer";
 
 import HomePage from "./pages/HomePage";
 import TanyaPage from "./pages/TanyaPage";
+import ExplorePage from "./pages/ExplorePage";
+import LocalHelpPage from "./pages/LocalHelpPage";
+import SettingsPage from "./pages/SettingsPage";
 
 function App() {
     const [sideBarState, setSideBarState] = useState(false);
@@ -30,7 +33,10 @@ function App() {
                 <SideBar states={states} />
 				<main className={`${sideBarState ? 'main-content' : 'main-content sidebar-collapsed'}`}>
 					{currentPage === "home" && <HomePage states={states} />}
-					{currentPage === "tanya" && <TanyaPage />}
+					{currentPage === "tanya" && <TanyaPage states={states}/>}
+                    {currentPage === "explore" && <ExplorePage states={states} />}
+                    {currentPage === "local-help" && <LocalHelpPage states={states} />}
+                    {currentPage === "settings" && <SettingsPage states={states} />}
 				</main>
             </div>
 			<Footer />
